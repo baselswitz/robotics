@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Line Follower Bot",
+    "type": "Educational Robot",
+    "function": "Follows a line path using infrared sensors to navigate automatically.",
+    "tech": "Arduino Uno, IR sensors, Motor driver (L298N), Chassis, Wheels",
+    "example": "Used in robotics competitions and basic automation demonstrations.",
+    "images": [
+      "assets/images/line_follower_1.jpg",
+      "assets/images/line_follower_2.jpg",
+      "assets/images/line_follower_3.jpg"
+    ]
+  },
+  {
+    "name": "Quadcopter Drone",
+    "type": "Aerial Robot",
+    "function": "Operates autonomously or remotely using GPS and onboard sensors for flight control.",
+    "tech": "Brushless motors, ESCs, IMU, GPS module, Flight controller, Propellers",
+    "example": "Used for aerial photography, inspection, mapping, and delivery services.",
+    "images": [
+      "assets/images/drone_1.jpg",
+      "assets/images/drone_2.jpg",
+      "assets/images/drone_3.jpg"
+    ]
+  },
+  {
+    "name": "Humanoid Robot",
+    "type": "Service Robot",
+    "function": "Designed to mimic human movement and behavior, capable of interaction and assistance.",
+    "tech": "AI vision, Speech recognition, Servo motors, Sensors, Machine learning algorithms",
+    "example": "Used for customer interaction, education, and research in human-robot collaboration.",
+    "images": [
+      "assets/images/humanoid_1.jpg",
+      "assets/images/humanoid_2.jpg",
+      "assets/images/humanoid_3.jpg"
+    ]
+  }
+]
