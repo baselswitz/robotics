@@ -71,6 +71,7 @@ header {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  transition: opacity 0.8s ease-in-out; /* ✨ Smooth fade transition */
 }
 
 .card-front h2 {
