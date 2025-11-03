@@ -45,11 +45,4 @@ function displayRobots(list) {
   });
 }
 
-searchInput.addEventListener('input', (e) => {
-  const term = e.target.value.toLowerCase();
-  const filtered = robots.filter(r =>
-    r.name.toLowerCase().includes(term) ||
-    r.type.toLowerCase().includes(term)
-  );
-  displayRobots(filtered);
-});
+
