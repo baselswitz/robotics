@@ -6,9 +6,9 @@
     "tech": "Arduino Uno, IR sensors, Motor driver (L298N), Chassis, Wheels",
     "example": "Used in robotics competitions and basic automation demonstrations.",
     "images": [
-      "assets/images/line_follower_1.jpg",
-      "assets/images/line_follower_2.jpg",
-      "assets/images/line_follower_3.jpg"
+      "assets/images/line_follower_1.png",
+      "assets/images/line_follower_2.png",
+      "assets/images/line_follower_3.png"
     ]
   },
   {
