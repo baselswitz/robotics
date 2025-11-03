@@ -3,7 +3,7 @@
     "name": "Line Follower Bot",
     "type": "Educational Robot",
     "function": "Follows a line path using infrared sensors to navigate automatically.",
-    "tech": "Arduino Uno, IR sensors, Motor driver (L298N), Chassis, Wheels",
+    "tech": "Arduino Uno, IR sensors, Motor driver, Chassis, Wheels",
     "example": "Used in robotics competitions and basic automation demonstrations.",
     "images": [
       "assets/images/line_follower_1.jpg",
