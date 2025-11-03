@@ -1,103 +1,84 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #0d1b2a, #1b263b, #0d1b2a);
+  color: #fff;
   margin: 0;
-  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
+  padding: 0;
+  text-align: center;
 }
 
 header {
-  text-align: center;
   padding: 20px;
 }
 
 #search {
   padding: 10px;
-  width: 80%;
-  max-width: 300px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
-  margin-top: 10px;
+  outline: none;
+  width: 220px;
+  font-size: 1em;
 }
 
-.gallery {
+#robot-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  width: 90%;
-  max-width: 1000px;
-  margin: 30px auto;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 30px;
 }
 
-.card {
-  background: #ffffff;
-  color: #333;
-  border-radius: 12px;
+.robot-card {
+  background: #1e2a47;
+  border-radius: 15px;
   overflow: hidden;
-  perspective: 1000px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.03);
-}
-
-.card-inner {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
-  width: 100%;
-  height: 350px;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
 }
 
-.card.flipped .card-inner {
-  transform: rotateY(180deg);
+.robot-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-.card-front,
-.card-back {
-  position: absolute;
+.image-carousel {
   width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
 }
 
-.card-front img {
+.image-carousel img {
   width: 100%;
-  height: 220px;
+  height: 180px;
   object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
 }
 
-.card-front h2 {
-  margin: 10px 0;
+.image-carousel img.active {
+  opacity: 1;
 }
 
-.card-back {
-  background: #1a1a1a;
-  color: white;
-  transform: rotateY(180deg);
-  padding: 20px;
-  box-sizing: border-box;
+.card-content {
+  padding: 15px;
 }
 
-footer {
-  text-align: center;
+h2 {
+  margin: 10px 0 5px;
+  color: #f4d35e;
+}
+
+p {
   font-size: 0.9em;
-  margin: 20px 0;
-  color: #bbb;
+  line-height: 1.4;
+  color: #ddd;
 }
 
 @media (max-width: 600px) {
-  .card-inner {
-    height: 300px;
-  }
-
-  .card-front img {
-    height: 180px;
+  #robot-gallery {
+    grid-template-columns: 1fr;
+    padding: 15px;
   }
 }
