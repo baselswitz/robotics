@@ -12,13 +12,13 @@ fetch('robots.json')
 
 function displayRobots(list) {
   gallery.innerHTML = '';
-  list.forEach(robot => {
+  list.forEach((robot, index) => {
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
       <div class="card-inner">
         <div class="card-front">
-          <img src="${robot.images[0]}" alt="${robot.name}">
+          <img src="${robot.images[0]}" alt="${robot.name}" id="robot-img-${index}">
           <h2>${robot.name}</h2>
           <p>${robot.type}</p>
         </div>
@@ -32,12 +32,22 @@ function displayRobots(list) {
     `;
     card.addEventListener('click', () => card.classList.toggle('flipped'));
     gallery.appendChild(card);
+
+    // 🌀 Automatic image cycling every 2 seconds
+    let imgIndex = 0;
+    setInterval(() => {
+      const imgEl = document.getElementById(`robot-img-${index}`);
+      if (imgEl) {
+        imgIndex = (imgIndex + 1) % robot.images.length;
+        imgEl.src = robot.images[imgIndex];
+      }
+    }, 2000);
   });
 }
 
 searchInput.addEventListener('input', (e) => {
   const term = e.target.value.toLowerCase();
-  const filtered = robots.filter(r => 
+  const filtered = robots.filter(r =>
     r.name.toLowerCase().includes(term) ||
     r.type.toLowerCase().includes(term)
   );
